@@ -208,15 +208,53 @@ console.log(animals);
 
 
 
-//  SCOPE
+//  CALLBACKS
+
+
+var myToaster = function () {
+    var maxTemp = 500;
+    var temp =0;
+    return{
+
+        setTemp: function (newTemp) {
+            if (newTemp>maxTemp){
+                console.log("the temp is too high");
+            }else {
+                this.temp = newTemp;
+
+            }
+        }
+    };
+};
+
+
+var myToaster = Toaster();
+myToaster.setTemp = (300);
 
 
 
+var  funcCaller = function (func, arg) {
+    return func(arg)
+
+}
+
+
+var firstVal = function (arr, func) {
+    func[arr[0], 0, arr];
+
+}
 
 
 
+firstVal = function (list, func) {
+    if (Array.isArray(list)){
+     return   func(arr[0], 0, arr)
+    }else {
+        var propArr = Object.keys(list);
+        func(list[propArr[0]], propArr[0], list);
+    }
 
-
+}
 
 
 
